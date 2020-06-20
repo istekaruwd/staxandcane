@@ -1,0 +1,436 @@
+/* Global */
+
+.full-tem {
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: 'Alef', sans-serif;
+    color: #494949;
+}
+.full-tem h1,
+.full-tem h2,
+.full-tem h3,
+.full-tem h4,
+.full-tem h5,
+.full-tem h6 {
+    font-family: 'Alef', sans-serif;
+    color: #333;
+    line-height: 1.3;
+    font-weight: 700;
+}
+.full-tem h1 {
+	font-size: 36px;
+}
+.full-tem h2 {
+	font-size: 30px;
+}
+.full-tem h3 {
+	font-size: 24px;
+}
+.full-tem h4 {
+	font-size: 18px;
+}
+.full-tem h5 {
+	font-size: 16px;
+}
+.full-tem h6 {
+	font-size: 14px;
+}
+a:hover {
+    text-decoration: none;
+}
+.full-tem {
+	overflow-x: hidden;
+}
+.full-tem img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Header Area */
+
+.tem-hdr {
+	padding: 40px 0;
+	background-color: #f4f4f4;
+}
+.hdr-logo a {
+	display: inline-block;
+}
+
+/* Product Area  */
+
+.product-area {
+	padding: 60px 0;
+	position: relative;
+}
+
+/* Gallery */
+
+.csslider {
+    position: relative;
+}
+.csslider > input {
+    display: none;
+}
+.csslider > input:nth-of-type(10):checked ~ ul li:first-of-type {
+    margin-left: -900%;
+}
+.csslider > input:nth-of-type(9):checked ~ ul li:first-of-type {
+    margin-left: -800%;
+}
+.csslider > input:nth-of-type(8):checked ~ ul li:first-of-type {
+    margin-left: -700%;
+}
+.csslider > input:nth-of-type(7):checked ~ ul li:first-of-type {
+    margin-left: -600%;
+}
+.csslider > input:nth-of-type(6):checked ~ ul li:first-of-type {
+    margin-left: -500%;
+}
+.csslider > input:nth-of-type(5):checked ~ ul li:first-of-type {
+    margin-left: -400%;
+}
+.csslider > input:nth-of-type(4):checked ~ ul li:first-of-type {
+    margin-left: -300%;
+}
+.csslider > input:nth-of-type(3):checked ~ ul li:first-of-type {
+    margin-left: -200%;
+}
+.csslider > input:nth-of-type(2):checked ~ ul li:first-of-type {
+    margin-left: -100%;
+}
+.csslider > input:nth-of-type(1):checked ~ ul li:first-of-type {
+    margin-left: 0;
+}
+.csslider > ul {
+    box-sizing: border-box;
+    font-size: 0;
+    line-height: 0;
+    margin: 0 0 0 auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    white-space: nowrap;
+    z-index: 1;
+    width: calc(100% - 150px);
+}
+.csslider > ul > li {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: initial;
+    height: 100%;
+    line-height: normal;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1) 0s;
+    vertical-align: middle;
+    white-space: normal;
+    width: 100%;
+    text-align: center;
+}
+.csslider > ul > li.scrollable {
+    overflow-y: scroll;
+}
+.csslider > .navigation {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    z-index: 9;
+    left: 0;
+    transform: translateY(-50%);
+}
+.csslider > .navigation label {
+    background: #fff;
+    cursor: pointer;
+    display: block;
+    padding: 4px;
+    position: relative;
+    margin: 5px 0;
+    width: 80px;
+    height: auto;
+}
+.csslider > .navigation label:hover::after {
+    opacity: 1;
+}
+.csslider > .navigation label::after {
+    background: transparent none repeat scroll 0 0;
+    border-radius: 50%;
+    content: "";
+    left: 50%;
+    margin-left: -6px;
+    margin-top: -6px;
+    opacity: 0;
+    padding: 6px;
+    position: absolute;
+    top: 50%;
+}
+.csslider > .arrows {
+    -moz-user-select: none;
+}
+.csslider.inside .navigation {
+    bottom: 10px;
+    margin-bottom: 10px;
+}
+.csslider.inside .navigation label {
+    border: 1px solid #7e7e7e;
+}
+.csslider > input:nth-of-type(1):checked ~ .navigation label:nth-of-type(1)::after,
+.csslider > input:nth-of-type(2):checked ~ .navigation label:nth-of-type(2)::after,
+.csslider > input:nth-of-type(3):checked ~ .navigation label:nth-of-type(3)::after,
+.csslider > input:nth-of-type(4):checked ~ .navigation label:nth-of-type(4)::after,
+.csslider > input:nth-of-type(5):checked ~ .navigation label:nth-of-type(5)::after,
+.csslider > input:nth-of-type(6):checked ~ .navigation label:nth-of-type(6)::after,
+.csslider > input:nth-of-type(7):checked ~ .navigation label:nth-of-type(7)::after,
+.csslider > input:nth-of-type(8):checked ~ .navigation label:nth-of-type(8)::after,
+.csslider > input:nth-of-type(9):checked ~ .navigation label:nth-of-type(9)::after,
+.csslider > input:nth-of-type(10):checked ~ .navigation label:nth-of-type(10)::after,
+.csslider > input:nth-of-type(11):checked ~ .navigation label:nth-of-type(11)::after {
+    opacity: 1;
+}
+.csslider > .arrows {
+    box-sizing: content-box;
+    height: 26px;
+    right: 0;
+    padding: 0 0;
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 150px);
+    z-index: 9;
+    transform: translateY(-50%);
+}
+.csslider > .arrows label {
+    cursor: pointer;
+    display: none;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50%;
+    z-index: 9999;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 0;
+}
+.csslider > .arrows label:after {
+	content: '\f104';
+	font-family: FontAwesome;
+}
+.csslider.infinity > input:first-of-type:checked ~ .arrows label.goto-last,
+.csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(0),
+.csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(1),
+.csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(2),
+.csslider > input:nth-of-type(4):checked ~ .arrows > label:nth-of-type(3),
+.csslider > input:nth-of-type(5):checked ~ .arrows > label:nth-of-type(4),
+.csslider > input:nth-of-type(6):checked ~ .arrows > label:nth-of-type(5),
+.csslider > input:nth-of-type(7):checked ~ .arrows > label:nth-of-type(6),
+.csslider > input:nth-of-type(8):checked ~ .arrows > label:nth-of-type(7),
+.csslider > input:nth-of-type(9):checked ~ .arrows > label:nth-of-type(8),
+.csslider > input:nth-of-type(10):checked ~ .arrows > label:nth-of-type(9),
+.csslider > input:nth-of-type(11):checked ~ .arrows > label:nth-of-type(10) {
+    display: block;
+    left: 10px;
+    right: auto;
+    transform: rotate(0deg);
+}
+.csslider.infinity > input:last-of-type:checked ~ .arrows label.goto-first,
+.csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(2),
+.csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(3),
+.csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(4),
+.csslider > input:nth-of-type(4):checked ~ .arrows > label:nth-of-type(5),
+.csslider > input:nth-of-type(5):checked ~ .arrows > label:nth-of-type(6),
+.csslider > input:nth-of-type(6):checked ~ .arrows > label:nth-of-type(7),
+.csslider > input:nth-of-type(7):checked ~ .arrows > label:nth-of-type(8),
+.csslider > input:nth-of-type(8):checked ~ .arrows > label:nth-of-type(9),
+.csslider > input:nth-of-type(9):checked ~ .arrows > label:nth-of-type(10),
+.csslider > input:nth-of-type(10):checked ~ .arrows > label:nth-of-type(11),
+.csslider > input:nth-of-type(11):checked ~ .arrows > label:nth-of-type(12) {
+    display: block;
+    left: auto;
+    right: 10px;
+    transform: rotate(180deg);
+}
+.rt-container {
+    margin: 0 auto;
+    width: 100%;
+}
+.csslider ul li img {
+    height: auto;
+    width: 100%;
+    max-height: 100%;
+}
+.navigation > label {
+    border: 1px solid #ddd;
+}
+
+/* Product Description */
+
+.pro-desc img {
+	margin-bottom: 15px;
+}
+.pro-desc table {
+	width: 100%;
+	margin-bottom: 15px;
+}
+.pro-desc table tr:nth-child(even) {
+	background-color: #f5f5f5;
+}
+.pro-desc table tr td {
+	border: 1px solid #eee;
+	padding: 10px;
+	vertical-align: top;
+}
+.pro-desc ol,
+.pro-desc ul {
+	margin: 0 0 15px;
+	padding-left: 18px;
+}
+.pro-desc ol li,
+.pro-desc ul li {
+	line-height: 2;
+}
+
+/* Accorian */
+
+.collapsel-content {
+	width: 100%;
+	margin: 35px auto 0;
+	border-bottom: 1px solid #eee;
+}
+.collapsel {
+	background: #fff;
+}
+.collapsel a {
+	display: block;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 24px 0;
+	position: relative;
+	background-color: #fff;
+	border-top: 1px solid #eee;
+	color: #333;
+}
+.collapsel a:before {
+	content: "\f105";
+	font-family: FontAwesome;
+	border-top: 7px solid #fff;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	position: absolute;
+	top: 25px;
+	right: 30px;
+}
+.inner-content {
+	padding: 0 0 15px;
+}
+.content {
+	max-height: 0em;
+	transition: 0.3s linear 0s;
+	overflow: hidden;
+}
+.collapsel:target .content {
+	max-height: 1000px;
+}
+.collapsel:target a:before {
+	transform: rotate(90deg);
+}
+
+
+/* Tab Area */
+
+.tab-area {
+	padding: 40px 0;
+	background-color: #f4f4f4;
+}
+.main-tab {
+    width: 100%;
+}
+.main-tab section {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #D3D3CD;
+}
+.main-tab input {
+    display: none;
+}
+.main-tab label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    color: #011e41;
+    border: 1px solid #D3D3CD;
+    background-color: #f7f7f7;
+    text-transform: uppercase;
+    border-radius: 4px 4px 0 0;
+}
+.main-tab label:hover {
+    color: #011e41;
+    cursor: pointer;
+}
+.main-tab input:checked + label {
+    color: #5e5e5e;
+    border: 1px solid #D3D3CD;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+}
+.main-tab #tab1:checked ~ #content1,
+.main-tab #tab2:checked ~ #content2,
+.main-tab #tab3:checked ~ #content3,
+.main-tab #tab4:checked ~ #content4,
+.main-tab #tab5:checked ~ #content5 {
+    display: block;
+    border: 1px solid #D3D3CD;
+    padding: 10px 10px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+/* Other Items */
+
+.other-items {
+	padding: 20px 0;
+}
+.cross-sell-gallery-item-description {
+	
+}
+
+
+/* LG Device :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+}
+
+/* MD Device :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+}
+
+/* Extra small Device. */
+@media (max-width: 767px) {
+	.csslider > .arrows,
+	.csslider > ul {
+		display: none;
+	}
+	.csslider > .navigation {
+		position: static;
+		transform: translateY(0);
+	}
+	.csslider > .navigation label {
+		width: 100%;
+	}
+	.pro-desc {
+		margin-top: 40px;
+	}
+	.main-tab label {
+		padding: 10px;
+		font-size: 12px;
+	}
+	.hdr-logo img {
+		height: 130px;
+	}
+ 
+}
