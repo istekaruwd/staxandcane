@@ -105,7 +105,7 @@ a:hover {
     box-sizing: border-box;
     font-size: 0;
     line-height: 0;
-    margin: 0 0 0 auto;
+    margin: 0 30px 0 auto;
     overflow: hidden;
     padding: 0;
     position: relative;
@@ -142,11 +142,11 @@ a:hover {
     background: #fff;
     cursor: pointer;
     display: block;
-    padding: 4px;
     position: relative;
     margin: 5px 0;
-    width: 80px;
+    width: 60px;
     height: auto;
+    padding: 3px;
 }
 .csslider > .navigation label:hover::after {
     opacity: 1;
@@ -189,7 +189,7 @@ a:hover {
 .csslider > .arrows {
     box-sizing: content-box;
     height: 26px;
-    right: 0;
+    right: 30px;
     padding: 0 0;
     position: absolute;
     top: 50%;
@@ -259,7 +259,7 @@ a:hover {
     max-height: 100%;
 }
 .navigation > label {
-    border: 1px solid #ddd;
+    border: 1px solid #838383;
 }
 
 /* Product Description */
@@ -291,48 +291,124 @@ a:hover {
 
 /* Accorian */
 
-.collapsel-content {
-	width: 100%;
-	margin: 35px auto 0;
-	border-bottom: 1px solid #eee;
+#aspect-content {
+    border-top: 1px solid #eee;
+    margin-top: 30px;
 }
-.collapsel {
-	background: #fff;
+.aspect-tab {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: #fff;
+    opacity: 1;
+    border-bottom: 1px solid #eee;
 }
-.collapsel a {
-	display: block;
-	font-size: 18px;
-	font-weight: 700;
-	padding: 24px 0;
-	position: relative;
-	background-color: #fff;
-	border-top: 1px solid #eee;
-	color: #333;
+.aspect-input {
+    display: none;
 }
-.collapsel a:before {
-	content: "\f105";
-	font-family: FontAwesome;
-	border-top: 7px solid #fff;
-	border-left: 7px solid transparent;
-	border-right: 7px solid transparent;
-	position: absolute;
-	top: 25px;
-	right: 30px;
+.aspect-input:checked ~ .aspect-content + .aspect-tab-content {
+    max-height: 3000px;
 }
-.inner-content {
-	padding: 0 0 15px;
+.aspect-input:checked ~ .aspect-content:after {
+    transform: rotate(0);
 }
-.content {
-	max-height: 0em;
-	transition: 0.3s linear 0s;
-	overflow: hidden;
+.aspect-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-height: 80px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    z-index: 1;
+    cursor: pointer;
 }
-.collapsel:target .content {
-	max-height: 1000px;
+.aspect-content {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 15px 0;
+    font-size: 0;
+    white-space: nowrap;
+    cursor: pointer;
 }
-.collapsel:target a:before {
-	transform: rotate(90deg);
+.aspect-content:before,
+.aspect-content:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
 }
+.aspect-content:before {
+    height: 100%;
+}
+.aspect-content::after {
+    position: absolute;
+    width: 24px;
+    height: 100%;
+    right: 0;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTI0IDI0SDBWMGgyNHoiIG9wYWNpdHk9Ii44NyIvPgogICAgICAgIDxwYXRoIGZpbGw9IiNBOUFDQUYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTE1Ljg4IDE1LjI5TDEyIDExLjQxbC0zLjg4IDMuODhhLjk5Ni45OTYgMCAxIDEtMS40MS0xLjQxbDQuNTktNC41OWEuOTk2Ljk5NiAwIDAgMSAxLjQxIDBsNC41OSA0LjU5Yy4zOS4zOS4zOSAxLjAyIDAgMS40MS0uMzkuMzgtMS4wMy4zOS0xLjQyIDB6Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=');
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(180deg);
+    top: 0;
+}
+.aspect-name {
+    display: inline-block;
+    font-weight: 700;
+    white-space: normal;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 18px;
+    color: #333;
+}
+.aspect-stat {
+    width: 40%;
+    text-align: right;
+}
+.all-opinions {
+    color: $tab-text;
+    text-align: left;
+}
+.aspect-content + .aspect-tab-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s;
+}
+.aspect-content > div,
+.aspect-stat > div {
+    display: inline-block;
+}
+.aspect-content > div {
+    vertical-align: middle;
+}
+.sentiment-wrapper {
+    padding: 15px 5px;
+}
+
+.sentiment-wrapper img {
+    margin-bottom: 15px;
+}
+.sentiment-wrapper table {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.sentiment-wrapper table tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+.sentiment-wrapper table tr td {
+    border: 1px solid #eee;
+    padding: 10px;
+    vertical-align: top;
+}
+.sentiment-wrapper ol,
+.sentiment-wrapper ul {
+    padding-left: 18px;
+}
+
 
 
 /* Tab Area */
@@ -382,9 +458,9 @@ a:hover {
 .main-tab #tab5:checked ~ #content5 {
     display: block;
     border: 1px solid #D3D3CD;
-    padding: 10px 10px;
+    padding: 20px 10px;
     background-color: #fff;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* Other Items */
@@ -405,7 +481,9 @@ a:hover {
 
 /* MD Device :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
-
+    .pro-desc {
+        margin-top: 30px;
+    }
 
 }
 
@@ -423,7 +501,7 @@ a:hover {
 		width: 100%;
 	}
 	.pro-desc {
-		margin-top: 40px;
+		margin-top: 30px;
 	}
 	.main-tab label {
 		padding: 10px;
