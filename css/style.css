@@ -194,7 +194,7 @@ a:hover {
     right: 30px;
     padding: 0 0;
     position: absolute;
-    top: 50%;
+    top: 242.5px;
     width: calc(100% - 150px);
     z-index: 10;
     transform: translateY(-50%);
